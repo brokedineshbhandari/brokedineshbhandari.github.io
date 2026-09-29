@@ -1,0 +1,30 @@
+---
+layout: default
+title: Essays
+---
+<style>
+    .page-header {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    /* Removes bullets and left padding from the list */
+    ul.essay-list {
+        list-style-type: none; 
+        padding-left: 0;
+    }
+    ul.essay-list li {
+        margin-bottom: 10px;
+    }
+</style>
+
+<div class="page-header">
+    <h2>Essays</h2>
+</div>
+
+<ul class="essay-list">
+  {% for post in site.posts %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    </li>
+  {% endfor %}
+</ul>
