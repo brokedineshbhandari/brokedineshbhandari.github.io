@@ -4,33 +4,52 @@
     <meta charset="utf-8">
     <title>{{ page.title }}</title>
     <style>
-        /* Global rules: Center everything, Arial 11pt */
+        /* Global rules */
         body {
             font-family: Arial, sans-serif;
             font-size: 11pt;
             display: flex;
-            justify-content: center; /* Centers the container on the screen */
+            justify-content: center; 
             margin: 0;
             padding: 50px 0;
             background-color: #ffffff;
             color: #000000;
         }
-        /* The 50% width container, left-aligned inside */
+        /* Top right navigation menu */
+        .top-nav {
+            position: absolute;
+            top: 30px;
+            right: 50px;
+        }
+        .top-nav a {
+            margin-left: 20px; /* Space between multiple links */
+            color: #0000EE;
+            text-decoration: none;
+        }
+        .top-nav a:hover {
+            text-decoration: underline;
+        }
+        /* The 50% width content container */
         .container {
             width: 50%;
             text-align: left; 
         }
-        /* Basic link styling */
-        a {
+        .container a {
             color: #0000EE;
             text-decoration: none;
         }
-        a:hover {
+        .container a:hover {
             text-decoration: underline;
         }
     </style>
 </head>
 <body>
+    <!-- This menu will now appear on every single page -->
+    <div class="top-nav">
+        <a href="/">Home</a>
+        <a href="/essays.html">Essays</a>
+    </div>
+
     <div class="container">
         {{ content }}
     </div>
