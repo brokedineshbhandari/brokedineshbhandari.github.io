@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+    <style>
+        /* Global rules: Center everything, Arial 11pt */
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 11pt;
+            display: flex;
+            justify-content: center; /* Centers the container on the screen */
+            margin: 0;
+            padding: 50px 0;
+            background-color: #ffffff;
+            color: #000000;
+        }
+        /* The 50% width container, left-aligned inside */
+        .container {
+            width: 50%;
+            text-align: left; 
+        }
+        /* Basic link styling */
+        a {
+            color: #0000EE;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        {{ content }}
+    </div>
+</body>
+</html>
