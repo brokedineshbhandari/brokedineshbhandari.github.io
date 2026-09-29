@@ -1,12 +1,30 @@
 ---
+layout: default
+title: Home
 ---
-<h1>Welcome to my Blog</h1>
+<style>
+    .home-header {
+        text-align: center; /* Centers just the picture and subtitle */
+        margin-bottom: 40px;
+    }
+    .home-header img {
+        width: 150px; /* Adjust size as needed */
+        border-radius: 5px; /* Optional: adds a slight rounding to image corners */
+    }
+    .subtitle {
+        font-size: 8pt; /* Arial 8 for the subtitle */
+        margin-top: 10px;
+    }
+</style>
 
-<h2>Latest Posts:</h2>
-<ul>
-  {% for post in site.posts %}
-    <li>
-      <a href="{{ post.url }}">{{ post.title }}</a>
-    </li>
-  {% endfor %}
-</ul>
+<div class="home-header">
+    <!-- Make sure to upload your image to the repository and put its exact name here -->
+    <img src="profile.jpg" alt="My Picture">
+    <div class="subtitle">Firstname Lastname</div>
+</div>
+
+<p>This is my introduction. Write whatever you want people to know about you right here.</p>
+
+<br>
+
+<p><a href="/essays.html">Essays</a></p>
